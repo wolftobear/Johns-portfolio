@@ -120,3 +120,11 @@ cityInput.addEventListener("keyup", function (event) {
     getWeather();
   }
 });
+
+const about = document.getElementById("about");
+const projects = document.getElementById("projects");
+const contacts = document.getElementById("contacts");
+const weather = document.getElementById("weather");
+const skills = document.getElementById("skills");
+
+function Scroll()
