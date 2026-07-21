@@ -187,6 +187,10 @@ section {
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  background:#fa6600;
+}
+.project-card p:hover{
+   color:white;
 }
 
 .project-card h3 {
