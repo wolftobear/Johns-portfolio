@@ -4,6 +4,9 @@ document.querySelector("nav ul").addEventListener("click", function (event) {
   const targetId = event.target.getAttribute("href"); // Gets "#about", "#projects", etc.
   if (targetId) {
     document.querySelector(targetId).scrollIntoView({ behavior: "smooth" });
+    document.getElementById("viewWork").scrollIntoView({ behavior: "smooth" });
+
+    
   }
 });
 
