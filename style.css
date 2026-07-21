@@ -1,1 +1,586 @@
+/* =========================
+   GENERAL STYLES
+========================= */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  background: #f5f5f5;
+  color: #333;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: #111;
+  color: rgb(2, 193, 252);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00adb5;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  padding: 60px 10%;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+
+/* HERO TEXT */
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  color: #02dae4;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 20px;
+  color: #ddd;
+  max-width: 650px;
+}
+
+
+/* HERO IMAGE */
+
+.hero-image {
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #00adb5;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+  padding: 80px 10%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.about p {
+  margin-bottom: 20px;
+}
+
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #00adb5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   WEATHER APP
+========================= */
+
+.weather-app-section {
+  background: linear-gradient(
+    135deg,
+    #4facfe,
+    #00f2fe
+  );
+}
+
+.weather-container {
+  background: white;
+  width: 350px;
+  max-width: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+}
+
+.weather-container h3 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+/* WEATHER SEARCH */
+
+.search-box {
+  display: flex;
+  gap: 10px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-box input:focus {
+  border-color: #00adb5;
+  box-shadow: 0 0 5px rgba(0, 173, 181, 0.3);
+}
+
+.search-box button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-box button:hover {
+  background: #0056b3;
+}
+
+
+/* CURRENT LOCATION BUTTON */
+
+.location-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #00adb5;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+
+.location-btn:hover {
+  background: #008f96;
+  transform: translateY(-2px);
+}
+
+.location-btn:active {
+  transform: translateY(0);
+}
+
+
+/* WEATHER INFORMATION */
+
+.weather-card {
+  margin-top: 25px;
+}
+
+#city {
+  margin-bottom: 10px;
+}
+
+#weatherIcon {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin: 10px 0;
+}
+
+#temperature {
+  font-size: 40px;
+  margin: 10px;
+}
+
+#condition {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+/* WEATHER DETAILS */
+
+.details {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.details p {
+  font-size: 14px;
+}
+
+
+/* WEATHER MESSAGES */
+
+#weatherError {
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#weatherLoading {
+  color: #555;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skill {
+  background: #00adb5;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.skill:hover {
+  transform: translateY(-3px);
+}
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+#contact {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.contact a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.contact img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.contact a:hover {
+  transform: translateY(-5px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: white;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 5%;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav ul li {
+    margin-left: 0;
+  }
+
+  nav ul a {
+    font-size: 14px;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    min-height: auto;
+    padding: 60px 5%;
+  }
+
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+  }
+
+
+  /* PROFILE IMAGE */
+
+  .hero-image {
+    flex: 0 0 auto;
+  }
+
+  .hero-image img {
+    width: 220px;
+    height: 220px;
+  }
+
+
+  /* SECTIONS */
+
+  section {
+    padding: 60px 5%;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+
+  /* ABOUT */
+
+  .about {
+    width: 100%;
+  }
+
+
+  /* PROJECTS */
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* WEATHER APP */
+
+  .weather-container {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+
+  .location-btn {
+    width: 100%;
+  }
+
+  .details {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+
+  /* CONTACT */
+
+  .contact {
+    gap: 20px;
+  }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 400px) {
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .hero-image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .weather-container {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+}
