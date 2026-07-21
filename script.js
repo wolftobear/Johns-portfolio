@@ -1,15 +1,19 @@
 /* ===== SMOOTH SCROLL ===== */
-document.querySelector("nav ul").addEventListener("click", function (event) {
-  event.preventDefault();
-  const targetId = event.target.getAttribute("href"); // Gets "#about", "#projects", etc.
-  if (targetId) {
-    document.querySelector(targetId).scrollIntoView({ behavior: "smooth" });
-    document.getElementById("viewWork").scrollIntoView({ behavior: "smooth" });
+document.querySelector("nav").addEventListener("click", function(event) {
+  // Check if what the user clicked is actually an anchor link <a>
+  if (event.target.tagName === "A") {
+    event.preventDefault(); // Stop instant jump behavior
 
-    
+    // Get the href attribute value (e.g., "#home", "#about")
+    const targetId = event.target.getAttribute("href");
+
+    // Find that section element on the page and scroll to it smoothly
+    const targetSection = document.querySelector(targetId);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
   }
 });
-
 /* ===== SKILLS HOVER EFFECT ===== */
 const skillBadges = document.querySelectorAll('.skill');
 skillBadges.forEach(skill => {
