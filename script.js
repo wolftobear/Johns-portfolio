@@ -1,4 +1,4 @@
-/* ===== SMOOTH SCROLL (No Switch Statement Required) ===== */
+/* ===== SMOOTH SCROLL ===== */
 document.querySelector("nav ul").addEventListener("click", function (event) {
   event.preventDefault();
   const targetId = event.target.getAttribute("href"); // Gets "#about", "#projects", etc.
