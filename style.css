@@ -155,33 +155,32 @@ section {
    ABOUT SECTION
 ========================= */
 
-.about {
+.AboutContent {
   display: flex;
   align-items: flex-start;
-  gap: 30px;
+  gap: 40px;
+}
+
+.AboutImageContainer {
+  flex: 0 0 300px;
 }
 
 #aboutImage {
-  width: 300px;
+  width: 100%;
   height: auto;
-  object-fit: cover;
   border-radius: 10px;
 }
 
-.about p {
-  margin-top: 0;
-  line-height: 1.6;
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
 }
 
-@media (max-width: 768px) {
-  .about {
-    flex-direction: column;
-  }
-
-  #aboutImage {
-    width: 100%;
-    max-width: 400px;
-  }
+.aboutText p {
+  margin: 0;
+  line-height: 1.6;
 }
 /* =========================
    PROJECTS SECTION
@@ -537,7 +536,17 @@ footer {
     width: 100%;
   }
 
+@media (max-width: 768px) {
+  .AboutContent {
+    flex-direction: column;
+  }
 
+  .AboutImageContainer {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
   /* PROJECTS */
 
   .projects {
