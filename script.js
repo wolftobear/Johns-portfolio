@@ -121,36 +121,38 @@ cityInput.addEventListener("keyup", function (event) {
   }
 });
 
-const about = document.getElementById("about");
-const projects = document.getElementById("projects");
-const contacts = document.getElementById("contacts");
-const weather = document.getElementById("weather");
-const skills = document.getElementById("skills");
+// ===== NAVIGATION SMOOTH SCROLL =====
+// Listen for clicks on any link inside the navigation menu
+document.querySelector("nav ul").addEventListener("click", function(event) {
+  event.preventDefault(); // Stop the instant jumping behavior
 
-const clickedItem = "projects"; // Example clicked value
+  // Get the section name from the href attribute (e.g., "#about" becomes "about")
+  const targetHref = event.target.getAttribute("href");
+  
+  switch (targetHref) {
+    case "#about":
+      document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+      break;
 
-switch (clickedItem) {
-  case "about":
-    window.scrollTo({ top: 100, behavior: "smooth" });
-    break;
+    case "#projects":
+      document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+      break;
 
-  case "projects":
-    window.scrollTo({ top: 600, behavior: "smooth" });
-    break;
+    case "#weather":
+      document.getElementById("weather").scrollIntoView({ behavior: "smooth" });
+      break;
 
-  case "contacts":
-    window.scrollTo({ top: 1200, behavior: "smooth" });
-    break;
+    case "#skills":
+      document.getElementById("skills").scrollIntoView({ behavior: "smooth" });
+      break;
 
-  case "weather":
-    window.scrollTo({ top: 1800, behavior: "smooth" });
-    break;
+    case "#contact":
+      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+      break;
 
-  case "skill":
-    window.scrollTo({ top: 2400, behavior: "smooth" });
-    break;
+    default:
+      console.log("No matching section found");
+  }
+});
 
-  default:
-    console.log("Unknown section clicked.");
-}
 
