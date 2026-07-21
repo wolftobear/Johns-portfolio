@@ -127,4 +127,30 @@ const contacts = document.getElementById("contacts");
 const weather = document.getElementById("weather");
 const skills = document.getElementById("skills");
 
-function Scroll()
+const clickedItem = "projects"; // Example clicked value
+
+switch (clickedItem) {
+  case "about":
+    window.scrollTo({ top: 100, behavior: "smooth" });
+    break;
+
+  case "projects":
+    window.scrollTo({ top: 600, behavior: "smooth" });
+    break;
+
+  case "contacts":
+    window.scrollTo({ top: 1200, behavior: "smooth" });
+    break;
+
+  case "weather":
+    window.scrollTo({ top: 1800, behavior: "smooth" });
+    break;
+
+  case "skill":
+    window.scrollTo({ top: 2400, behavior: "smooth" });
+    break;
+
+  default:
+    console.log("Unknown section clicked.");
+}
+
