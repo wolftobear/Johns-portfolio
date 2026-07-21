@@ -37,70 +37,48 @@ nav ul{
   list-style:none;
 }
 
-nav ul li{
-  margin-left:20px;
-}
+@media (max-width: 768px){
+  nav{
+    flex-direction:column;
+    gap:15px;
+  }
 
-nav a{
-  color:white;
-  text-decoration:none;
-}
+  nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+  }
 
-nav a:hover{
-  color:#00adb5;
-}
+  nav ul li{
+    margin-left:0;
+  }
 
-/* HERO */
-.hero {
-  min-height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #222;
-  padding: 60px 10%;
-}
+  .hero-content{
+    flex-direction:column-reverse;
+    text-align:center;
+    gap:30px;
+  }
 
-.hero-content {
-  width: 100%;
-  max-width: 1100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 80px;
-}
+  .hero-text{
+    text-align:center;
+  }
 
-/* TEXT ON LEFT */
-.hero-text {
-  flex: 1;
-  text-align: left;
-}
+  .hero-text h1{
+    font-size:32px;
+  }
 
-.hero-text h1 {
-  font-size: 42px;
-  color: #02DAE4;
-  margin-bottom: 20px;
-}
+  .hero-text p{
+    font-size:18px;
+  }
 
-.hero-text p {
-  font-size: 20px;
-  color: #666;
-  max-width: 650px;
-}
+  .hero-image{
+    flex:0 0 auto;
+  }
 
-/* IMAGE ON RIGHT */
-.hero-image {
-  flex: 0 0 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-image img {
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 50%;
-}
+  .hero-image img{
+    width:220px;
+    height:220px;
+  }
 
 .btn{
   padding:10px 20px;
@@ -299,7 +277,7 @@ footer{
     <li data-section="weather"><a href="#weather">Weather App</a></li>
     <li data-section="skills"><a href="#skills">Skills</a></li>
     <li data-section="contact"><a href="#contact">Contact</a></li>
-    <a href="resume.pdf" target="_blank">My Resume</a>
+    <li><a href="resume.pdf" target="_blank">My Resume</a></li>
   </ul>
 </nav>
 
@@ -448,7 +426,7 @@ footer{
   <h2 class="section-title">Connect with me</h2>
   <div class="contact">
     <a href="mailto:johnathanw36@gmail.com"><img id="email" src="mail.png"></a>
-    <a href="www.linkedin.com/in/johnathan-watson-249a1b176"><img id="Linkedln" src="social.png"></a>
+    <a href="https://www.linkedin.com/in/johnathan-watson-249a1b176" target="_blank"><img id="Linkedln" src="social.png"></a>
     <a href="https://github.com/wolftobear"><img id="github" src="github.png"></a>
   </div>
 </section>
