@@ -290,7 +290,23 @@
       color: #555;
       margin-top: 10px;
     }
+  .location-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #00adb5;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
 
+.location-btn:hover {
+  background: #008f96;
+  transform: translateY(-2px);
+}
 
     /* =========================
        SKILLS
@@ -684,88 +700,89 @@
   </section>
 
 
-  <!-- =========================
-       WEATHER APP
-  ========================= -->
+ <!-- =========================
+     WEATHER APP
+========================= -->
 
-  <section id="weather" class="weather-app-section">
+<section id="weather" class="weather-app-section">
 
-    <h2 class="section-title">
-      Weather App
-    </h2>
+  <h2 class="section-title">
+    Weather App
+  </h2>
 
-    <div class="weather-container">
+  <div class="weather-container">
 
-      <h3>
-        Check the Weather
+    <h3>
+      Check the Weather
+    </h3>
+
+    <div class="search-box">
+
+      <input
+        id="cityInput"
+        type="text"
+        placeholder="Enter city name"
+      >
+
+      <button id="weatherSearchBtn">
+        Search
+      </button>
+
+    </div>
+
+    <!-- CURRENT LOCATION BUTTON -->
+
+    <button id="currentLocationBtn" class="location-btn">
+      📍 Use My Current Location
+    </button>
+
+    <p id="weatherLoading"></p>
+
+    <p id="weatherError"></p>
+
+    <div class="weather-card">
+
+      <h2 id="city">
+        City
+      </h2>
+
+      <img
+        id="weatherIcon"
+        src=""
+        alt="Weather icon"
+      >
+
+      <h3 id="temperature">
+        --°F
       </h3>
 
+      <p id="condition">
+        Condition
+      </p>
 
-      <div class="search-box">
+      <div class="details">
 
-        <input
-          id="cityInput"
-          type="text"
-          placeholder="Enter city name"
-        >
-
-        <button id="weatherSearchBtn">
-          Search
-        </button>
-
-      </div>
-
-
-      <p id="weatherLoading"></p>
-
-      <p id="weatherError"></p>
-
-
-      <div class="weather-card">
-
-        <h2 id="city">
-          City
-        </h2>
-
-        <img
-          id="weatherIcon"
-          src=""
-          alt="Weather icon"
-        >
-
-        <h3 id="temperature">
-          --°F
-        </h3>
-
-        <p id="condition">
-          Condition
+        <p>
+          Humidity:
+          <span id="humidity">
+            --%
+          </span>
         </p>
 
-
-        <div class="details">
-
-          <p>
-            Humidity:
-            <span id="humidity">
-              --%
-            </span>
-          </p>
-
-          <p>
-            Wind:
-            <span id="wind">
-              -- mph
-            </span>
-          </p>
-
-        </div>
+        <p>
+          Wind:
+          <span id="wind">
+            -- mph
+          </span>
+        </p>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
 
+</section>
 
   <!-- =========================
        SKILLS
