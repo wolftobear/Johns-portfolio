@@ -66,8 +66,8 @@ function hoverSkill(projectId, skillIds, color) {
   });
 
 }
-hoverSkill("weatherProject", ["jsSkill", "htmlSkill", "cssSkill"], "#00adb5");
+hoverSkill("weatherProject", ["jsSkill", "htmlSkill", "cssSkill", "ReactSkill", "apiSkill"], "#00adb5");
 
-hoverSkill("rpsProject", ["cppSkill"], "#00adb5");
+hoverSkill("rpsProject", ["jsSkill", "htmlSkill", "cssSkill"], "#00adb5");
 
-hoverSkill("todoProject", ["htmlSkill", "cssSkill", "jsSkill"], "#00adb5");
+hoverSkill("todoProject", "", "#00adb5");
