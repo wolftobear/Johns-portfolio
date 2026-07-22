@@ -414,3 +414,39 @@ currentLocationBtn.addEventListener(
   "click",
   getCurrentLocation
 );
+const weatherApp = document.getElementById("weatherApp");
+const rpsApp = document.getElementById("rpsApp");
+
+const showWeatherBtn = document.getElementById("showWeatherBtn");
+const showRPSBtn = document.getElementById("showRPSBtn");
+
+
+// Show Weather App
+function showWeather() {
+
+    weatherApp.style.display = "block";
+    rpsApp.style.display = "none";
+
+    showWeatherBtn.classList.add("active");
+    showRPSBtn.classList.remove("active");
+}
+
+
+// Show Rock Paper Scissors
+function showRPS() {
+
+    weatherApp.style.display = "none";
+    rpsApp.style.display = "block";
+
+    showWeatherBtn.classList.remove("active");
+    showRPSBtn.classList.add("active");
+}
+
+
+// Button switching
+showWeatherBtn.addEventListener("click", showWeather);
+showRPSBtn.addEventListener("click", showRPS);
+
+
+// Start with Weather App
+showWeather();
