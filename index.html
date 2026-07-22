@@ -7,7 +7,9 @@
 
   <title>John | Portfolio</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="RPS.css">
 <script src="script.js" defer></script>
+  <script src="RPS.js"></script>
 
 </head>
 
@@ -182,13 +184,17 @@
       <div class="project-card">
 
         <h3>
-          Recipe Finder
+          Rock✊/Paper✋🏿/Scissors✌🏿
         </h3>
 
         <p>
-          Coming soon 🚧
+          A fun game of roc paper scissors i mad in c++ originaly,
+          but translated it into a html, css, JavaScript form of it
+          alot of people would enjoy.
         </p>
-
+            <a href="#RPS">
+          Try it below &darr;
+        </a>
       </div>
 
 
@@ -292,6 +298,83 @@
     </div>
 
   </div>
+
+</section>
+   <!-- =========================
+     Rock Paper sciccors
+========================= -->
+
+<section id="RPS" class="Rock-Paper-Scissors-section">
+
+    <div class="game-container">
+
+        <h1>Rock Paper Scissors</h1>
+
+        <p class="subtitle">Choose your weapon!</p>
+
+        <div class="choices">
+
+            <button onclick="playGame('Rock')">
+                ✊
+                <span>Rock</span>
+            </button>
+              
+            <button onclick="playGame('Paper')">
+                ✋
+                <span>Paper</span>
+            </button>
+              
+            <button onclick="playGame('Scissors')">
+                ✌️
+                <span>Scissors</span>
+            </button>
+
+        </div>
+
+        <div class="battle">
+
+            <div>
+                <h2>You</h2>
+                <p id="player-choice">-</p>
+            </div>
+
+            <div class="vs">
+                VS
+            </div>
+
+            <div>
+                <h2>CPU</h2>
+                <p id="cpu-choice">-</p>
+            </div>
+
+        </div>
+
+        <h2 id="result">Choose Rock, Paper, or Scissors</h2>
+
+        <div class="score">
+
+            <div>
+                <h3>Wins</h3>
+                <p id="wins">0</p>
+            </div>
+
+            <div>
+                <h3>Ties</h3>
+                <p id="ties">0</p>
+            </div>
+
+            <div>
+                <h3>Losses</h3>
+                <p id="losses">0</p>
+            </div>
+
+        </div>
+
+        <button class="reset-button" onclick="resetGame()">
+            Reset Game
+        </button>
+
+    </div>
 
 </section>
 
