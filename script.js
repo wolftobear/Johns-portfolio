@@ -45,3 +45,48 @@ skillBadges.forEach(skill => {
 
 });
 
+const weatherProject = document.getElementById("weatherProject");
+const rpsProject = document.getElementById("rpsProject");
+const todoProject = document.getElementById("todoProject");
+
+const jsSkill = document.getElementById("jsSkill");
+const cppSkill = document.getElementById("cppSkill");
+const htmlSkill = document.getElementById("htmlSkill");
+
+// Weather App -> JavaScript
+
+weatherProject.addEventListener("mouseenter", function () {
+    jsSkill.style.backgroundColor = "white";
+    jsSkill.style.color = "#00adb5";
+});
+
+weatherProject.addEventListener("mouseleave", function () {
+    jsSkill.style.backgroundColor = "#00adb5";
+    jsSkill.style.color = "white";
+});
+
+
+// Rock Paper Scissors -> C++
+
+rpsProject.addEventListener("mouseenter", function () {
+    cppSkill.style.backgroundColor = "white";
+    cppSkill.style.color = "#ff6b00";
+});
+
+rpsProject.addEventListener("mouseleave", function () {
+    cppSkill.style.backgroundColor = "#00adb5";
+    cppSkill.style.color = "white";
+});
+
+
+// To Do List -> HTML
+
+todoProject.addEventListener("mouseenter", function () {
+    htmlSkill.style.backgroundColor = "white";
+    htmlSkill.style.color = "#7b2cbf";
+});
+
+todoProject.addEventListener("mouseleave", function () {
+    htmlSkill.style.backgroundColor = "#00adb5";
+    htmlSkill.style.color = "white";
+});
