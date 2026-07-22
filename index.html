@@ -172,8 +172,8 @@
           and pulls current conditions from Open-Meteo.
         </p>
 
-        <a href="#apps" onclick="showWeather()">
-  Try it below &darr;
+        <a href="" target = "_blank">
+  Try it now &darr;
 </a>
 
       </div>
@@ -188,12 +188,12 @@
         </h3>
 
         <p>
-          A fun game of roc paper scissors i mad in c++ originaly,
+          A fun game of rock paper scissors i mad in c++ originaly,
           but translated it into a html, css, JavaScript form of it
           alot of people would enjoy.
         </p>
-<a href="#apps" onclick="showRPS()">
-  Try it below &darr;
+<a href="" target = "_blank">
+  Try it now &darr;
 </a>
       </div>
 
@@ -215,192 +215,6 @@
     </div>
 
   </section>
-
-
- <!-- =========================
-     INTERACTIVE APPS
-========================= -->
-
-<section id="apps">
-
-  <h2 class="section-title">
-    Interactive Projects
-  </h2>
-
-  <!-- APP NAVIGATION -->
-
-  <div class="app-switcher">
-
-    <button id="showWeatherBtn" class="app-btn active">
-      🌤️ Weather App
-    </button>
-
-    <button id="showRPSBtn" class="app-btn">
-      ✊ Rock Paper Scissors
-    </button>
-
-  </div>
-
-
-  <!-- =========================
-       WEATHER APP
-  ========================= -->
-
-  <div id="weatherApp" class="app-container">
-
-    <h2>Weather App</h2>
-
-    <h3>
-      Check the Weather
-    </h3>
-
-    <div class="search-box">
-
-      <input
-        id="cityInput"
-        type="text"
-        placeholder="Enter city name"
-      >
-
-      <button id="weatherSearchBtn">
-        Search
-      </button>
-
-    </div>
-
-    <button id="currentLocationBtn" class="location-btn">
-      📍 Use My Current Location
-    </button>
-
-    <p id="weatherLoading"></p>
-
-    <p id="weatherError"></p>
-
-    <div class="weather-card">
-
-      <h2 id="city">
-        City
-      </h2>
-
-      <img
-        id="weatherIcon"
-        src=""
-        alt="Weather icon"
-      >
-
-      <h3 id="temperature">
-        --°F
-      </h3>
-
-      <p id="condition">
-        Condition
-      </p>
-
-      <div class="details">
-
-        <p>
-          Humidity:
-          <span id="humidity">--%</span>
-        </p>
-
-        <p>
-          Wind:
-          <span id="wind">-- mph</span>
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- =========================
-       ROCK PAPER SCISSORS
-  ========================= -->
-
-  <div id="rpsApp" class="app-container">
-
-    <div class="game-container">
-
-      <h2>Rock Paper Scissors</h2>
-
-      <p class="subtitle">
-        Choose your weapon!
-      </p>
-
-      <div class="choices">
-
-        <button onclick="playGame('Rock')">
-          ✊
-          <span>Rock</span>
-        </button>
-
-        <button onclick="playGame('Paper')">
-          ✋
-          <span>Paper</span>
-        </button>
-
-        <button onclick="playGame('Scissors')">
-          ✌️
-          <span>Scissors</span>
-        </button>
-
-      </div>
-
-      <div class="battle">
-
-        <div>
-          <h3>You</h3>
-          <p id="player-choice">-</p>
-        </div>
-
-        <div class="vs">
-          VS
-        </div>
-
-        <div>
-          <h3>CPU</h3>
-          <p id="cpu-choice">-</p>
-        </div>
-
-      </div>
-
-      <h3 id="result">
-        Choose Rock, Paper, or Scissors
-      </h3>
-
-      <div class="score">
-
-        <div>
-          <h4>Wins</h4>
-          <p id="wins">0</p>
-        </div>
-
-        <div>
-          <h4>Ties</h4>
-          <p id="ties">0</p>
-        </div>
-
-        <div>
-          <h4>Losses</h4>
-          <p id="losses">0</p>
-        </div>
-
-      </div>
-
-      <button
-        class="reset-button"
-        onclick="resetGame()"
-      >
-        Reset Game
-      </button>
-
-    </div>
-
-  </div>
-
-</section>
 
   <!-- =========================
        SKILLS
