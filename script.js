@@ -41,24 +41,33 @@ skillBadges.forEach(function (skill) {
 
 
 /* ===== PROJECT HOVER ===== */
-
-function hoverSkill(projectId, skillId, color) {
+function hoverSkill(projectId, skillIds, color) {
 
   const project = document.getElementById(projectId);
-  const skill = document.getElementById(skillId);
 
   project.addEventListener("mouseenter", function () {
-    skill.style.backgroundColor = "white";
-    skill.style.color = color;
+
+    skillIds.forEach(function(id) {
+      const skill = document.getElementById(id);
+      skill.style.backgroundColor = "white";
+      skill.style.color = color;
+    });
+
   });
 
   project.addEventListener("mouseleave", function () {
-    skill.style.backgroundColor = "#00adb5";
-    skill.style.color = "white";
+
+    skillIds.forEach(function(id) {
+      const skill = document.getElementById(id);
+      skill.style.backgroundColor = "#00adb5";
+      skill.style.color = "white";
+    });
+
   });
 
 }
+hoverSkill("weatherProject", ["jsSkill", "htmlSkill", "cssSkill"], "#00adb5");
 
-hoverSkill("weatherProject", "jsSkill", "#00adb5");
-hoverSkill("rpsProject", "cppSkill", "#ff6b00");
-hoverSkill("todoProject", "htmlSkill", "#7b2cbf");
+hoverSkill("rpsProject", ["cppSkill"], "#ff6b00");
+
+hoverSkill("todoProject", ["htmlSkill", "cssSkill", "jsSkill"], "#7b2cbf");
