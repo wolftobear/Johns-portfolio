@@ -620,3 +620,58 @@ footer {
   }
 
 }
+/* =========================
+   INTERACTIVE APPS
+========================= */
+
+#apps {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+
+/* APP SWITCHER */
+
+.app-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+
+.app-btn {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+
+.app-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+.app-btn.active {
+    font-weight: bold;
+}
+
+
+/* APP CONTAINER */
+
+.app-container {
+    max-width: 700px;
+    margin: 0 auto;
+    min-height: 500px;
+}
+
+
+/* RPS HIDDEN BY DEFAULT */
+
+#rpsApp {
+    display: none;
+}
