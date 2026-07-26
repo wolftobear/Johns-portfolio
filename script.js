@@ -70,4 +70,4 @@ hoverSkill("weatherProject", ["jsSkill", "htmlSkill", "cssSkill", "ReactSkill", 
 
 hoverSkill("rpsProject", ["jsSkill", "htmlSkill", "cssSkill"], "#00adb5");
 
-hoverSkill("todoProject", "cppSkill", "#00adb5");
+hoverSkill("todoProject", ["cppSkill"], "#00adb5");
